@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- App Header -->
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SEVAH"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#00BCD4"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <!-- Contact Name Input -->
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHeader"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/editTextName"
+        android:background="#CCCCCC" />
+
+    <!-- Phone Number Input -->
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextName"
+        android:layout_marginTop="24dp"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/editTextPhone"
+        android:background="#00BCD4" />
+
+    <!-- Add Contact Button -->
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPhone"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_background"
+        android:padding="16dp"
+        android:text="ADD CONTACT"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Delete Contact Button -->
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAdd"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:padding="16dp"
+        android:text="DELETE CONTACT"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- View Contacts Button -->
+    <Button
+        android:id="@+id/buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonDelete"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:padding="16dp"
+        android:text="VIEW CONTACTS"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Contact List -->
+    <ListView
+        android:id="@+id/listViewContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonView"
+        android:layout_marginTop="24dp" />
+
+    <!-- Bottom Navigation Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!-- Map Screen Navigation Button -->
+        <Button
+            android:id="@+id/buttonOpenMap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/sos_button_background"
+            android:padding="16dp"
+            android:text="OPEN MAP"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <!-- Animations Screen Navigation Button -->
+        <Button
+            android:id="@+id/buttonOpenAnimations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/sos_button_background"
+            android:padding="16dp"
+            android:text="ANIMATIONS"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

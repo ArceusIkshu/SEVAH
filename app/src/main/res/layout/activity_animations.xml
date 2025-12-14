@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- App Header -->
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SEVAH - TRAINING VIDEOS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#00BCD4"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <!-- Video Player Container -->
+    <FrameLayout
+        android:id="@+id/videoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/textViewHeader"
+        android:layout_marginTop="16dp"
+        android:background="#EEEEEE">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <!-- Placeholder text when no video is playing -->
+        <TextView
+            android:id="@+id/textViewPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Select a video to play"
+            android:textSize="18sp"
+            android:textColor="#888888" />
+    </FrameLayout>
+
+    <!-- Video Selection Buttons -->
+    <TextView
+        android:id="@+id/textViewSelectVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoContainer"
+        android:layout_marginTop="24dp"
+        android:text="SELECT A TRAINING VIDEO"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <GridLayout
+        android:id="@+id/gridLayoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSelectVideo"
+        android:layout_marginTop="16dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <!-- CPR Video Button -->
+        <Button
+            android:id="@+id/buttonCPR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_background"
+            android:padding="24dp"
+            android:text="CHOKING"
+            android:drawableTop="@drawable/ic_cpr"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <!-- Fracture Care Video Button -->
+        <Button
+            android:id="@+id/buttonFracture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_background"
+            android:padding="24dp"
+            android:text="FRACTURE CARE"
+            android:drawableTop="@drawable/ic_fracture"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <!-- First Aid Video Button -->
+        <Button
+            android:id="@+id/buttonFirstAid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_background"
+            android:padding="24dp"
+            android:text="HEATSTROKE"
+            android:drawableTop="@drawable/ic_first_aid"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <!-- Emergency Response Video Button -->
+        <Button
+            android:id="@+id/buttonEmergency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_background"
+            android:padding="24dp"
+            android:text="FAINT"
+            android:drawableTop="@drawable/ic_emergency"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </GridLayout>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:padding="16dp"
+        android:text="BACK TO HOME"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>
